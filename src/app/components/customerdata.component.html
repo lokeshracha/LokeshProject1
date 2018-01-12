@@ -1,0 +1,43 @@
+<h2>customer Details </h2>
+<div class="col-md-12">
+    <button (click)="createBtnClick()">Create New customer</button>
+</div>
+<div class="col-md-12">
+    <label>Filter</label>
+    <input type="text" (input)="filterdata($event)">
+    <a (click)="refreshBtnClick()">Refresh</a> 
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Gender</th>
+      <th>Email</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customerGridData" class="success">
+      <td>{{customer.firstname}}</td>
+      <td>{{customer.lastname}}</td>
+      <td>{{customer.address}}</td>
+      <td>{{customer.city}}</td>
+      <td>{{customer.state}}</td>
+      <td>{{customer.gender}}</td>
+      <td>{{customer.emailID}}</td>
+      <td>
+        <a [routerLink]="['/registration',customer.id]">Edit</a>
+      </td>
+      <td>
+        <a (click)="removedetails(customer.id)">Delete</a>
+      </td>
+    </tr>  
+  </tbody>
+</table>
+
+

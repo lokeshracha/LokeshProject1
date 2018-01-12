@@ -1,0 +1,61 @@
+
+
+
+
+    <h2>Signup Form</h2>
+
+    <form  [formGroup]="signupsave">
+        <div >
+            <div class="col-md-12 form-group">
+                <label>
+                    <b>First Name</b>
+                </label>
+                <input type="text" formControlName = "firstname" class="form-control"  required>
+            </div>
+            <div class="col-md-12 form-group">
+                <label>
+                    <b>Last Name</b>
+                </label>
+                <input type="text" formControlName = "lastname" class="form-control"  required>
+            </div>
+            <div class="col-md-12 form-group">
+                <label>
+                    <b>phone</b>
+                </label>
+                <input  type="number" formControlName = "phone" class="form-control" required>
+
+            </div>
+            <div class="col-md-12 form-group">
+                <label>
+                    <b>username</b>
+                </label>
+                <input type="text" formControlName = "username" class="form-control" required>
+
+            </div>
+            <div class="col-md-12 form-group">
+                <label>
+                    <b>Email</b>
+                </label>
+                <input type="text" formControlName = "emailID" class="form-control" required>
+
+            </div>
+            <div class="col-md-12 form-group">
+                <label>
+                    <b>password</b>
+                </label>
+                <input  formControlName = "password" class="form-control"  required>
+            </div>
+            <div class="col-md-12 form-group">
+                <label>
+                    <b>conform password</b>
+                </label>
+                <input type="password"   class="form-control"  required>
+            </div>
+         
+
+            <button  class="btn btn-success" (click)="customerLoginCreate()">Create</button>
+            <button  class="btn btn-danger" (click)="signupCancle()">Cancel</button>
+            
+
+        </div>
+    </form>
